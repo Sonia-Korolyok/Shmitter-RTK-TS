@@ -1,12 +1,13 @@
 import {createSlice, type PayloadAction} from "@reduxjs/toolkit";
 import type {StatKey} from "../../utils/types";
+import {Following, Followers} from "../../utils/constants.ts";
 
 
 const statsSlice = createSlice({
     name: "stats",
     initialState: {
-        followers: 0,
-        following: 0
+        [Followers]: 0,
+        [Following]: 0
     },
     reducers: {
         changeStats: {
