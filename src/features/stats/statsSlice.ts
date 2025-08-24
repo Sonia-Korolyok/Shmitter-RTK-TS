@@ -1,5 +1,5 @@
 import {createSlice, type PayloadAction} from "@reduxjs/toolkit";
-import {StatsType} from "../../utils/models/stats-type.model.ts";
+import {StatsType} from "../../utils/types.d";
 
 
 const statsSlice = createSlice({

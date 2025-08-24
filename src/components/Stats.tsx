@@ -1,7 +1,7 @@
 import Avatar from "./Avatar.tsx";
 import {changeStats} from "../features/stats/statsSlice.ts";
 import {useAppDispatch, useAppSelector} from "../app/hooks.ts";
-import {StatsType} from "../utils/models/stats-type.model.ts";
+import {StatsType} from "../utils/types.d";
 
 const Stats = () => {
     const {followers, following} = useAppSelector(state => state.stats);
