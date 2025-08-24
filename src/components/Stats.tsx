@@ -1,7 +1,7 @@
 import Avatar from "./Avatar.tsx";
 import {changeStats} from "../features/stats/statsSlice.ts";
 import {useAppDispatch, useAppSelector} from "../app/hooks.ts";
-import {Followers, Following} from "../utils/constants.ts";
+import {StatsType} from "../utils/models/stats-type.model.ts";
 
 const Stats = () => {
     const {followers, following} = useAppSelector(state => state.stats);
@@ -16,17 +16,17 @@ const Stats = () => {
             </div>
             <div className={'stats'}>
                 <div
-                    onClick={() => dispatch(changeStats( Followers, 1))}
+                    onClick={() => dispatch(changeStats(StatsType.FOLLOWERS, 1 ))}
                     onContextMenu={(e) => {
                         e.preventDefault();
-                        dispatch(changeStats(Followers, -1));
+                        dispatch(changeStats(StatsType.FOLLOWERS, -1));
                     }}
                 >Followers: {followers}</div>
                 <div
-                    onClick={() => dispatch(changeStats( Following, 1))}
+                    onClick={() => dispatch(changeStats( StatsType.FOLLOWING, 1))}
                     onContextMenu={(e) => {
                         e.preventDefault();
-                        dispatch(changeStats(Following, -1));
+                        dispatch(changeStats(StatsType.FOLLOWING, -1));
                     }}
                 >Following: {following}</div>
             </div>

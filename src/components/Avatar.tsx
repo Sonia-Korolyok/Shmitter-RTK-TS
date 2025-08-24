@@ -1,7 +1,7 @@
 
 import {changeAvatar, changeName} from "../features/user/userSlice.ts";
 import {useAppDispatch, useAppSelector} from "../app/hooks.ts";
-import type {AvatarProps} from "../utils/types";
+import type {AvatarProps} from "../utils/types.d.ts";
 
 
 const Avatar = ({ size = 'default' }: AvatarProps) => {

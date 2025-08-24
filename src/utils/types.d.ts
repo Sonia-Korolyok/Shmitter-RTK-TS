@@ -1,15 +1,11 @@
-export type StatKey = 'followers' | 'following';
+// export const StatKey = StatsType.FOLLOWERS | StatsType.FOLLOWING;
 
-export type AvatarProps = {
+export interface AvatarProps {
     size?: 'small' | 'default';
-};
+}
 
-export interface Stats {
-    followers: number,
-    following: number,
-}
-// Homework 2 instead of constants folllowers and following, use enum
-export enum StatsType {
-    FOLLOWERS = 'followers',
-    FOLLOWING = 'following',
-}
+// export interface Stats {
+//     followers: number,
+//     following: number,
+// }
+// Homework 2 instead of constants followers and following, use enum
